@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   z-index: -1;
-  background-image: url('https://www.verzani.com.br/wp-content/uploads/2020/03/estacionamento-terceirizado.jpg');
+  //background-image: url('https://www.verzani.com.br/wp-content/uploads/2020/03/estacionamento-terceirizado.jpg');
 `
 
 export const Container = styled.div`
@@ -22,6 +22,7 @@ export const Column = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-right: 6rem;
 `
 
 export const Content = styled.div`
@@ -67,8 +68,14 @@ export const Login = styled.div`
   margin-top: 2rem;
 
   input {
+    color: white;
     border-radius: 5px;
-    background: rgba(28, 28, 28, 0.8);
+    //background: rgba(28, 28, 28, 0.8);
+    border: solid white 2px;
+  }
+
+  button {
+    background: #8257e6;
   }
 
   label {

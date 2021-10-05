@@ -27,17 +27,17 @@ const Login: React.FC = () => {
                   className="textfield"
                   id="outlined-basic"
                   label="E-mail"
-                  variant="outlined"
+                  variant="filled"
                 />
 
                 <TextField
                   fullWidth
                   id="outlined-basic"
                   label="Senha"
-                  variant="outlined"
+                  variant="filled"
                 />
 
-                <Button fullWidth variant="outlined" color="primary">
+                <Button fullWidth variant="contained" color="primary">
                   Login
                 </Button>
               </Styled.Login>
