@@ -1,4 +1,8 @@
 export interface Car {
-    name: string,
-    year: number
+    model: string,
+    year: number,
+    price: number,
+    imgUrl: string,
+    make: string
+    horsepower: number
 }

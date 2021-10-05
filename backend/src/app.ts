@@ -20,6 +20,7 @@ class App {
     private routes (): void {
         this.express.use(routes)
     }
+    
 }
 
 export default new App().express

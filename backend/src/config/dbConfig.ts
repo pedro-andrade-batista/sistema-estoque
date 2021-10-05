@@ -32,6 +32,8 @@ const Query = async (connection: mysql.Connection, query: string) => new Promise
 })
 
 const SaveCar = async (connection: mysql.Connection, car: Car, query: string) => new Promise((resolve, reject) => {
+    console.log(`Query: ${query}`)
+    console.log(`Car: ${car}`)
     connection.query(query, car, (error, sucess) => {
         if (error) {
             reject(error)

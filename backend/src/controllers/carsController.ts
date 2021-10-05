@@ -23,7 +23,7 @@ class CarsController {
         return res.send(cars)
     }
 
-    public teste (req: Request, res: Response): Response {
+    public teste (req: Request, res: Response): void {
         const query = 'SELECT * FROM cars'
         let isError = false
         Connect()
@@ -51,7 +51,7 @@ class CarsController {
     public registerCar (req: Request, res: Response): void {
         const newCar: Car = req.body
         let hasError = false
-        const query = 'insert into cars values = ?'
+        const query = 'insert into cars set ?'
         Connect()
         .then(connection => {
             SaveCar(connection, newCar, query)
