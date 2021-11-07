@@ -1,42 +1,21 @@
 // External Libraries
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import Card from '@material-ui/core/Card'
-import CardActions from '@material-ui/core/CardActions'
-import CardContent from '@material-ui/core/CardContent'
-import Button from '@material-ui/core/Button'
-import Typography from '@material-ui/core/Typography'
 import Head from 'next/head'
+import { Modal } from '@material-ui/core'
+
+// Components
+import Car from '../Car'
 
 // Stylization
 import * as Styled from './styles'
 
-const useStyles = makeStyles({
-  root: {
-    minWidth: 275
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)'
-  },
-  title: {
-    fontSize: 14
-  },
-  pos: {
-    marginBottom: 12
-  }
-})
+// Data
+import { carList } from '../../../utils/carList'
 
-interface StockProps {
-  name: string
-  price: number
-}
-
-const Stock: React.FC<StockProps> = ({ name, price }) => {
-  const classes = useStyles()
-  const bull = <span className={classes.bullet}>•</span>
-  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+const Stock: React.FC = () => {
+  const [open, setOpen] = React.useState(false)
+  const handleOpen = () => setOpen(true)
+  const handleClose = () => setOpen(false)
 
   return (
     <>
@@ -46,27 +25,50 @@ const Stock: React.FC<StockProps> = ({ name, price }) => {
 
       <Styled.Container>
         <Styled.Content>
-          {numbers.map(n => {
-            return (
-              <Card className={classes.root} variant="outlined">
-                <CardContent>
-                  <Typography
-                    className={classes.title}
-                    color="textSecondary"
-                    gutterBottom
-                  >
-                    Produto{n}
-                  </Typography>
-                  <Typography variant="body2" component="p">
-                    Descrição do produto {n}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small">Saber mais!</Button>
-                </CardActions>
-              </Card>
-            )
-          })}
+          <Styled.Table>
+            <thead>
+              <tr>
+                <td>Marca</td>
+                <td>Modelo</td>
+                <td>Preço</td>
+                <td>Ano</td>
+                <td>Potência</td>
+                <td>Detalhes</td>
+              </tr>
+            </thead>
+            <tbody>
+              {carList.map((car, key) => (
+                <tr>
+                  <Car
+                    key={key}
+                    make={car.make}
+                    model={car.model}
+                    price={car.price}
+                    year={car.year}
+                    horsepower={car.horsepower}
+                  />
+                  <td>
+                    <Styled.Button onClick={handleOpen}>
+                      <Styled.Dot />
+                      <Styled.Dot />
+                      <Styled.Dot />
+                    </Styled.Button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </Styled.Table>
+
+          <Modal open={open} onClose={handleClose} className="modal">
+            <Styled.ModalContainer>
+              <Styled.ModalContent>
+                <h3>Name</h3>
+                <h4>marca</h4>
+                <h4>valor</h4>
+                <h4>modelo</h4>
+              </Styled.ModalContent>
+            </Styled.ModalContainer>
+          </Modal>
         </Styled.Content>
       </Styled.Container>
     </>
