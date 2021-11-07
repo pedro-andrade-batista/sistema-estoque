@@ -1,10 +1,10 @@
 // External Libraries
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
-import { Modal } from '@material-ui/core'
 
 // Components
 import Car from '../Car'
+import CarModal from '../CarModal'
 
 // Stylization
 import * as Styled from './styles'
@@ -12,10 +12,31 @@ import * as Styled from './styles'
 // Data
 import { carList } from '../../../utils/carList'
 
+interface CarProps {
+  make: string
+  model: string
+  price: number
+  year: number
+  horsepower: number
+}
+
 const Stock: React.FC = () => {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = useState(false)
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
+
+  // let selectedCar: CarProps
+  let [seletedCar, setSelectedCar] = useState(null)
+
+  // const selected = (car: CarProps): void => {
+  //   setOpen(true)
+  //   selectedCar = car
+  //   console.log(selectedCar)
+  // }
+
+  useEffect(() => {
+    console.log(seletedCar)
+  }, [seletedCar])
 
   return (
     <>
@@ -38,9 +59,8 @@ const Stock: React.FC = () => {
             </thead>
             <tbody>
               {carList.map((car, key) => (
-                <tr>
+                <tr key={key}>
                   <Car
-                    key={key}
                     make={car.make}
                     model={car.model}
                     price={car.price}
@@ -48,7 +68,12 @@ const Stock: React.FC = () => {
                     horsepower={car.horsepower}
                   />
                   <td>
-                    <Styled.Button onClick={handleOpen}>
+                    <Styled.Button
+                      onClick={() => {
+                        handleOpen()
+                        setSelectedCar(car)
+                      }}
+                    >
                       <Styled.Dot />
                       <Styled.Dot />
                       <Styled.Dot />
@@ -59,16 +84,7 @@ const Stock: React.FC = () => {
             </tbody>
           </Styled.Table>
 
-          <Modal open={open} onClose={handleClose} className="modal">
-            <Styled.ModalContainer>
-              <Styled.ModalContent>
-                <h3>Name</h3>
-                <h4>marca</h4>
-                <h4>valor</h4>
-                <h4>modelo</h4>
-              </Styled.ModalContent>
-            </Styled.ModalContainer>
-          </Modal>
+          <CarModal open={open} onRequestClose={handleClose} car={seletedCar} />
         </Styled.Content>
       </Styled.Container>
     </>

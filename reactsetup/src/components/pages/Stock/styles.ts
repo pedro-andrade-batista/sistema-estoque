@@ -55,32 +55,3 @@ export const Dot = styled.div`
   border-radius: 50px;
   background: white;
 `
-
-export const ModalContainer = styled.div`
-  width: 500px;
-  height: 300px;
-
-  align-self: center;
-  justify-self: center;
-
-  background: #222222;
-  border-radius: 15px;
-
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-`
-
-export const ModalContent = styled.div`
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  padding: 3rem;
-`
