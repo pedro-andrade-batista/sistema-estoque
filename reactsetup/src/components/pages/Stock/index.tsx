@@ -26,7 +26,7 @@ const Stock: React.FC = () => {
   const handleClose = () => setOpen(false)
 
   // let selectedCar: CarProps
-  let [seletedCar, setSelectedCar] = useState(null)
+  let [seletedCar, setSelectedCar] = useState(carList[0])
 
   // const selected = (car: CarProps): void => {
   //   setOpen(true)
