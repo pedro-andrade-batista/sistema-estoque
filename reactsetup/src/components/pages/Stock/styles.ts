@@ -14,11 +14,12 @@ export const Content = styled.div`
 `
 
 export const Table = styled.table`
-  width: 1300px;
+  width: 1050px;
   border-collapse: collapse;
 
-  thead > tr > td {
+  thead > tr > th {
     font-weight: bold;
+    text-align: left;
   }
 
   tr {

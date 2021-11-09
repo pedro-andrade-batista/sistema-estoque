@@ -49,12 +49,13 @@ const Stock: React.FC = () => {
           <Styled.Table>
             <thead>
               <tr>
-                <td>Marca</td>
-                <td>Modelo</td>
-                <td>Preço</td>
-                <td>Ano</td>
-                <td>Potência</td>
-                <td>Detalhes</td>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Preço</th>
+                <th>Ano</th>
+                <th>Potência</th>
+                {/* <th>Ações</th> */}
+                <th>Detalhes</th>
               </tr>
             </thead>
             <tbody>
