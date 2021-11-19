@@ -6,3 +6,11 @@ export const Buttons = styled.td`
     margin-right: 0.75rem;
   }
 `
+
+interface TdProps {
+  quantity: number
+}
+
+export const Td = styled.td<TdProps>`
+  color: ${props => (props.quantity < 10 ? 'yellow' : 'white')};
+`

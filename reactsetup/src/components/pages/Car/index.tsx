@@ -8,19 +8,18 @@ import * as Styled from './styles'
 interface CarProps {
   make: string
   model: string
-  price: number
   year: number
-  horsepower: number
+  quantity: number
+  price: number
 }
 
-const Car: React.FC<CarProps> = ({ make, model, price, year, horsepower }) => {
+const Car: React.FC<CarProps> = ({ make, model, price, quantity, year }) => {
   return (
     <>
-      <td>{make}</td>
-      <td>{model}</td>
-      <td>{price}</td>
-      <td>{year}</td>
-      <td>{horsepower}</td>
+      <Styled.Td quantity={quantity}>{make}</Styled.Td>
+      <Styled.Td quantity={quantity}>{model}</Styled.Td>
+      <Styled.Td quantity={quantity}>{year}</Styled.Td>
+      <Styled.Td quantity={quantity}>{price}</Styled.Td>
       {/* <Styled.Buttons>
         <Button variant="contained" color="primary">
           Editar

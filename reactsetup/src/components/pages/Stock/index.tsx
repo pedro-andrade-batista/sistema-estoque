@@ -11,12 +11,14 @@ import * as Styled from './styles'
 
 // Data
 import { carList } from '../../../utils/carList'
+import Menu from '../Menu'
 
 interface CarProps {
   make: string
   model: string
   price: number
   year: number
+  quantity: number
   horsepower: number
 }
 
@@ -44,6 +46,8 @@ const Stock: React.FC = () => {
         <title>Página de Estoque</title>
       </Head>
 
+      <Menu />
+
       <Styled.Container>
         <Styled.Content>
           <Styled.Table>
@@ -53,9 +57,8 @@ const Stock: React.FC = () => {
                 <th>Modelo</th>
                 <th>Preço</th>
                 <th>Ano</th>
-                <th>Potência</th>
                 {/* <th>Ações</th> */}
-                <th>Detalhes</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -64,9 +67,9 @@ const Stock: React.FC = () => {
                   <Car
                     make={car.make}
                     model={car.model}
-                    price={car.price}
                     year={car.year}
-                    horsepower={car.horsepower}
+                    quantity={car.quantity}
+                    price={car.price}
                   />
                   <td>
                     <Styled.Button
@@ -84,6 +87,10 @@ const Stock: React.FC = () => {
               ))}
             </tbody>
           </Styled.Table>
+          <Styled.Subtitle>
+            <Styled.YellowCircle />
+            <h5>carros com baixo estoque</h5>
+          </Styled.Subtitle>
 
           <CarModal open={open} onRequestClose={handleClose} car={seletedCar} />
         </Styled.Content>

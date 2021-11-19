@@ -11,6 +11,7 @@ interface CarProps {
   price: number
   year: number
   horsepower: number
+  quantity: number
   img_url: string
 }
 
@@ -32,6 +33,7 @@ const CarModal: React.FC<ModalProps> = ({ open, onRequestClose, car }) => {
             <h4>Modelo: {car.model}</h4>
             <h4>Preço: {car.price}</h4>
             <h4>Ano: {car.year}</h4>
+            <h4>Quantidade: {car.quantity}</h4>
             <h4>Potência: {car.horsepower}</h4>
           </Styled.Column>
 

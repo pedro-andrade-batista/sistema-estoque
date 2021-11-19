@@ -12,7 +12,6 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 `
 
 export const Column = styled.div`

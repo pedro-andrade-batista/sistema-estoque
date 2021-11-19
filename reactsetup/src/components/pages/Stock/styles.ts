@@ -11,15 +11,18 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   display: flex;
+  flex-direction: column;
 `
 
 export const Table = styled.table`
-  width: 1050px;
+  width: 900px;
+  margin-top: 3rem;
   border-collapse: collapse;
 
   thead > tr > th {
     font-weight: bold;
     text-align: left;
+    padding: 0.75rem;
   }
 
   tr {
@@ -55,4 +58,22 @@ export const Dot = styled.div`
   height: 5px;
   border-radius: 50px;
   background: white;
+`
+
+export const Subtitle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+
+  align-self: flex-end;
+`
+
+export const YellowCircle = styled.div`
+  width: 10px;
+  height: 10px;
+
+  background: yellow;
+  border-radius: 10px;
+  margin-right: 0.75rem;
 `

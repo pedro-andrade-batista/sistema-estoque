@@ -6,6 +6,7 @@ export const carList = [
     make: 'acura',
     model: 'ilx',
     price: 31890,
+    quantity: 37,
     img_url:
       'http://ts2.mm.bing.net/th?id=OIP.M7656c6f6aaa4d51c3ddee4b1192adeeeH0&pid=15.1'
   },
@@ -16,6 +17,7 @@ export const carList = [
     make: 'acura',
     model: 'rdx',
     price: 40370,
+    quantity: 30,
     img_url:
       'http://ts4.mm.bing.net/th?id=OIP.M9e8c70aff2632ee58fc97806bf5b83ffH0&pid=15.1'
   },
@@ -26,6 +28,7 @@ export const carList = [
     make: 'acura',
     model: 'rlx',
     price: 65950,
+    quantity: 22,
     img_url:
       'http://ts2.mm.bing.net/th?id=OIP.Mab377a39ce357ff2b18160e770e8822cH0&pid=15.1'
   },
@@ -36,6 +39,7 @@ export const carList = [
     make: 'acura',
     model: 'tlx',
     price: 44800,
+    quantity: 9,
     img_url:
       'http://ts2.mm.bing.net/th?id=OIP.M7027fde17ca39f879ff85c98171367afH0&pid=15.1'
   },
@@ -46,6 +50,7 @@ export const carList = [
     make: 'alfa-romeo',
     model: '4c',
     price: 55900,
+    quantity: 23,
     img_url:
       'http://ts2.mm.bing.net/th?id=OIP.M8a3a74ca54214aa8f59f312b20d67407H0&pid=15.1'
   },
@@ -56,6 +61,7 @@ export const carList = [
     make: 'alfa-romeo',
     model: '4c-spider',
     price: 63900,
+    quantity: 35,
     img_url:
       'http://ts1.mm.bing.net/th?id=OIP.Mc2a03f245da8da7c5b9255ecda1c234co0&pid=15.1'
   },
@@ -66,6 +72,7 @@ export const carList = [
     make: 'aston-martin',
     model: 'db9-gt',
     price: 198250,
+    quantity: 6,
     img_url:
       'http://ts2.mm.bing.net/th?id=OIP.M6ea50edfaf424f185331d4840b695e73o0&pid=15.1'
   },
@@ -76,6 +83,7 @@ export const carList = [
     make: 'aston-martin',
     model: 'rapide-s',
     price: 206000,
+    quantity: 11,
     img_url:
       'http://ts2.mm.bing.net/th?id=OIP.M8405c51f97d104b4eb7cdfec4e80bb5bo0&pid=15.1'
   },
@@ -86,6 +94,7 @@ export const carList = [
     make: 'aston-martin',
     model: 'v12-vantage-s',
     price: 198195,
+    quantity: 4,
     img_url:
       'http://ts3.mm.bing.net/th?id=OIP.M37dc9b347ed530569b2063f0988c9a0fH0&pid=15.1'
   },
@@ -96,6 +105,7 @@ export const carList = [
     make: 'aston-martin',
     model: 'v8-vantage',
     price: 109000,
+    quantity: 39,
     img_url:
       'http://ts3.mm.bing.net/th?id=OIP.Mb3321ac399a0b3715da3d6a7186098f5H0&pid=15.1'
   }
